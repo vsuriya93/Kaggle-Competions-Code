@@ -1,0 +1,27 @@
+digraph Tree {
+0 [label="Ratio9 <= 0.0093\ngini = 0.493079584775\nsamples = 34", shape="box"] ;
+1 [label="Ratio6 <= 0.1348\ngini = 0.290657439446\nsamples = 17", shape="box"] ;
+0 -> 1 ;
+2 [label="Ratio8 <= 0.9327\ngini = 0.21875\nsamples = 16", shape="box"] ;
+1 -> 2 ;
+3 [label="Ratio8 <= 0.9287\ngini = 0.375\nsamples = 8", shape="box"] ;
+2 -> 3 ;
+4 [label="Ratio4 <= 0.0216\ngini = 0.244897959184\nsamples = 7", shape="box"] ;
+3 -> 4 ;
+5 [label="gini = 0.0000\nsamples = 5\nvalue = [ 5.  0.]", shape="box"] ;
+4 -> 5 ;
+6 [label="gini = 0.5000\nsamples = 2\nvalue = [ 1.  1.]", shape="box"] ;
+4 -> 6 ;
+7 [label="gini = 0.0000\nsamples = 1\nvalue = [ 0.  1.]", shape="box"] ;
+3 -> 7 ;
+8 [label="gini = 0.0000\nsamples = 8\nvalue = [ 8.  0.]", shape="box"] ;
+2 -> 8 ;
+9 [label="gini = 0.0000\nsamples = 1\nvalue = [ 0.  1.]", shape="box"] ;
+1 -> 9 ;
+10 [label="Ratio5 <= 0.0023\ngini = 0.110726643599\nsamples = 17", shape="box"] ;
+0 -> 10 ;
+11 [label="gini = 0.0000\nsamples = 1\nvalue = [ 1.  0.]", shape="box"] ;
+10 -> 11 ;
+12 [label="gini = 0.0000\nsamples = 16\nvalue = [  0.  16.]", shape="box"] ;
+10 -> 12 ;
+}

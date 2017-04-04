@@ -1,0 +1,14 @@
+
+
+The DecisionTreeClassifier works by repeatedly splitting the training data, based on the value of some feature. The Scikit-learn implementation lets you choose between a few splitting algorithms by providing a value to the splitter keyword argument.
+
+    "best" randomly chooses a feature and finds the 'best' possible split for it, according to some criterion (which you can also choose; see the methods signature and the criterion argument). It looks like the code does this N_feature times, so it's actually quite like a bootstrap.
+
+    "random" chooses the feature to consider at random, as above. However, it also then tests randomly-generated thresholds on that feature (random, subject to the constraint that it's between its minimum and maximum values). This may help avoid 'quantization' errors on the tree where the threshold is strongly influenced by the exact values in the training data.
+
+Both of these randomization methods can improve the trees' performance. There are some relevant experimental results in Lui, Ting, and Fan's (2005) KDD paper.
+
+If you absolutely must have an identical tree every time, then I'd re-use the same random_state. Otherwise, I'd expect the trees to end up more or less equivalent every time and, in the absence of a ton of held-out data, I'm not sure how you'd decide which random tree is best.
+
+See also: Source code for the splitter
+
